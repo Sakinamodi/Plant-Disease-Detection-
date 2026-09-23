@@ -1,0 +1,32 @@
+plant disease detection s/m
+
+dataset on drive so mounting it from drive 
+unzipping zip  file 
+os. = for path or s/m permissions
+imports
+test,valid_generator,train = existing folder in plant disase dataset
+framing all pictures from dataset = train generator = to normalize the data of image made it false becoz we had preexisting dataset 
+validation split = 0.1 means 10% data for validation 
+batch size of image= how many image we are processing at once 
+
+classes=list -->framed dataset and displayed
+
+
+tensor flow= if image is 5x4 and imp is only 3x4 image then only keep that 
+stride = leaving no. of boxes in the matrix
+activation function = relu = remove all the unnecessary / unimportant boxes fro the matrix
+pool size =2 == only 2 parts of the selected boxes
+
+
+dense layer = processing and comparison of the data will be don on this layer 
+dropout= no need to get biased 
+
+from tensorflow.keras.callbacks import EarlyStopping,ModelCheckpoint,ReduceLROnPlateau = if accuracy is not increasing , early stop the model from over training 
+
+
+history = model.fit(
+    train_generator,
+    epochs=3,
+    validation_data=valid_generator,
+    callbacks=callbacks
+) = epox , the model will get ttained for no. of epox which will be st
